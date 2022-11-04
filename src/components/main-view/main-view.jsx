@@ -15,7 +15,9 @@ export class MainView extends React.Component {
             this.setState({
               movies: response.date
             });
-          })
+          }) .catch(error => {
+            console.log(error);
+          });
       },
       selectedMovie: null
     };
