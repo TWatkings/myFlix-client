@@ -9,18 +9,18 @@ export class MainView extends React.Component {
     super();
     this.state = {
       movies: [],
-      componentDidMount() {
-        axios.get('https://tomflix.herokuapp.com/movies')
-          .then(response => {
-            this.setState({
-              movies: response.date
-            });
-          }) .catch(error => {
-            console.log(error);
-          });
-      },
       selectedMovie: null
     };
+  }
+  componentDidMount() {
+    axios.get('https://tomflix.herokuapp.com/movies')
+      .then(response => {
+        this.setState({
+          movies: response.date
+        });
+      }) .catch(error => {
+        console.log(error);
+      });
   }
   setSelectedMovie(newSelectedMovie) {
     this.setState({

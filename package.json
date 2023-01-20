@@ -4,7 +4,9 @@
   "description": "Using React, build the client-side for an application called myFlix based onits existing server-side code (REST API and database).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
