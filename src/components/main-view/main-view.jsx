@@ -13,7 +13,7 @@ export class MainView extends React.Component {
     };
   }
   componentDidMount() {
-    axios.get('https://tomflix.herokuapp.com/movies')
+    axios.get('http://localhost:1234/movies')
       .then(response => {
         this.setState({
           movies: response.date
