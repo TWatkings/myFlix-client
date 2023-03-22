@@ -25264,17 +25264,17 @@ class MainView extends _reactDefault.default.Component {
         super();
         this.state = {
             movies: [],
-            componentDidMount () {
-                _axiosDefault.default.get('https://tomflix.herokuapp.com/movies').then((response)=>{
-                    this.setState({
-                        movies: response.date
-                    });
-                }).catch((error)=>{
-                    console.log(error);
-                });
-            },
             selectedMovie: null
         };
+    }
+    componentDidMount() {
+        _axiosDefault.default.get('https://firstflix.herokuapp.com/movies').then((response)=>{
+            this.setState({
+                movies: response.date
+            });
+        }).catch((error)=>{
+            console.log(error);
+        });
     }
     setSelectedMovie(newSelectedMovie) {
         this.setState({
