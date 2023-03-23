@@ -25268,9 +25268,9 @@ class MainView extends _reactDefault.default.Component {
         };
     }
     componentDidMount() {
-        _axiosDefault.default.get('https://floating-sands-76676.herokuapp.com/movies').then((response)=>{
+        _axiosDefault.default.get('https://myFlix.herokuapp.com/movies').then((response)=>{
             this.setState({
-                movies: response.date
+                movies: response.data
             });
         }).catch((error)=>{
             console.log(error);
